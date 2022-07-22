@@ -8,7 +8,6 @@ const morgan = require("morgan");
 const logger = require("./helpers/winston.js");
 const config = require("./config/index.js");
 const passport = require("passport");
-require("./passport/passport.js");
 
 const router = require("./routes/productos.routes.js");
 const routerMsg = require("./routes/mensajes.routes.js");
@@ -57,7 +56,7 @@ app.use((req, res, next) => {
 app.set("views", "./src/views");
 
 app.set("view engine", "ejs");
-app.set("view engine", "pug");
+//app.set("view engine", "pug");
 
 app.use("/api/productos", router);
 app.use("/api/cart", cartRoutes);

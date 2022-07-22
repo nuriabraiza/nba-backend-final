@@ -12,7 +12,7 @@ class MongoCxn {
   }
 
   createConnection() {
-    const uri = `mongodb+srv://${config.DB_USER}:${config.DB_PASS}@cluster0.tqtau.mongodb.net/${config.DB_NAME}?retryWrites=true&w=majority`;
+    const uri = `mongodb+srv://@cluster0.tqtau.mongodb.net/${config.DB_NAME}?retryWrites=true&w=majority`;
     const options = {
       useNewUrlParser: true,
       useCreateIndex: true,
