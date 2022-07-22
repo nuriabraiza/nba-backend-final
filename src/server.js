@@ -8,6 +8,7 @@ const morgan = require("morgan");
 const logger = require("./helpers/winston.js");
 const config = require("./config/index.js");
 const passport = require("passport");
+require("./passport/passport.js");
 
 const router = require("./routes/productos.routes.js");
 const routerMsg = require("./routes/mensajes.routes.js");
